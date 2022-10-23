@@ -20,7 +20,7 @@ php -sS 127.0.0.1:80
 How to change your Password:
 
 edit the config.php file
-and replace the default value "`!***1FA45BD90***`"
+and replace the default value `!***1FA45BD90***` 
 with your custom password
 
 ***********
