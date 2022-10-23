@@ -1,0 +1,72 @@
+html {
+    background-color: #181818;
+}
+
+body {
+    font-family: arial;
+}
+
+.message {
+    color: rgb(252, 104, 104);
+    border-top: solid gray 2px; /*lines*/
+    padding: 20px 0px;
+}
+.message message {
+    word-wrap: break-word;
+    color: green;
+    font-weight: bold;
+}
+.message name::after {
+    content: ": ";
+}
+
+.message date {
+    float: right;
+}
+
+#message {
+    width: 80%;
+}
+
+select {
+    border-color: #d8d8d8;
+    background-color: #efefef;
+    border-style: solid;
+    border-width: thin;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+input[type=button] {
+    border-color: transparent;
+    border-radius: 5px;
+    width: 80px;
+    height: 32px;
+    background-color: rgb(252, 104, 104);
+    color: white;
+    font-weight: bolder;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    border-color: transparent;
+    border-radius: 5px;
+    width: 80px;
+    height: 32px;
+    background-color: rgb(252, 104, 104);
+    color: white;
+    font-weight: bolder;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.msag {
+    background-color: #242424;
+    height: 28px;
+    border-color: transparent;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}

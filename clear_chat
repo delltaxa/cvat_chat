@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msg="<p style=\"color: yellow; text-align: center;\">v1.0.0.0</p>"
+
+echo "$msg" > chat.txt
