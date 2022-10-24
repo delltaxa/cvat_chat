@@ -6,6 +6,15 @@ body {
     font-family: arial;
 }
 
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .message {
     color: rgb(252, 104, 104);
     border-top: solid gray 2px; /*lines*/
