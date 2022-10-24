@@ -117,7 +117,7 @@ session_start();
             <input type="password" style="height: 40px; width: 240px; font-size: 20px;" id="keebox">
             <br/>
             <p id="loginmsg" style="font-size: 16px; font-weight: bolder">Enter The Key</p>
-            <input type="submit" style="width: 250px; height: 45px; text-align: center;">
+            <input type="submit" value="Join!" style="width: 250px; height: 45px; text-align: center;">
         </div>
     </form>
 
