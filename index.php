@@ -124,7 +124,7 @@ session_start();
     <div id="messages">
     </div>
     <form action="post.php" id="pbost" method="POST" hidden>
-        <input hidden type="text" id="uname" name="name" <?php if ($_SESSION['name'] !== null) {echo 'value=' . $_SESSION['name'];} ?> />
+        <input hidden type="text" id="uname" name="name" />
         <input hidden type="text" name="inkay" id="inkuy">
         <p></p>
 
