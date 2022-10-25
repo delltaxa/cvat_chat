@@ -55,7 +55,7 @@
         $_SESSION['name'] = $name;
 
 
-        $text = '<name>' . $name . '</name>' . '<message>' . $message . '</message>  <date>' . date("Y-m-d") . ' ' . date("H:i:s") . "</date>\n";
+        $text = '<name>' . $name . '</name><br/><br/>' . '<message>' . $message . '</message><br/><br/><date>' . date("Y-m-d") . ' ' . date("H:i:s") . "</date><br/>\n";
 
         $text_paus = encrypt_decrypt("encrypt", $text, $passw);
         $text = $text_paus . "\n";

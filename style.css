@@ -1,10 +1,147 @@
 html {
-    background-color: #181818;
+    background-color: #18181f; 
+    box-sizing: border-box;
+    font-size: 10px;
 }
 
 body {
     font-family: arial;
 }
+  
+*,  *:before,  *:after {
+  box-sizing: inherit;
+}
+ 
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+ 
+li {
+  list-style: none;
+}
+ 
+p, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+ 
+a {
+  text-decoration: none;
+}
+ 
+input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+ 
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+ 
+
+h1.demo {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: #f5f6ff;
+}
+ 
+a.demo {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: rgba(202, 205, 239, 0.8);
+  margin-bottom: 3rem;
+}
+ 
+.demo-flex-spacer {
+  flex-grow: 1;
+}
+ 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+ 
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+ 
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.webflow-style-input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 1.4rem 2rem 1.6rem;
+  background: rgba(57, 63, 84, 0.8);
+}
+.webflow-style-input:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: linear-gradient(to right, #b294ff, #57e6e6, #feffb8, #57e6e6, #b294ff, #57e6e6);
+  background-size: 500% auto;
+  -webkit-animation: gradient 3s linear infinite;
+          animation: gradient 3s linear infinite;
+}
+ 
+.webflow-style-input input {
+  flex-grow: 1;
+  color: #bfd2ff;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+}
+
+.webflow-style-input input::-webkit-input-placeholder {
+  color: #7881a1;
+}
+ 
+.webflow-style-input button {
+  color: #7881a1;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color 0.25s;
+}
+
+.webflow-style-input button:hover {
+  color: #bfd2ff;
+}
+
 
 .vertical-center {
     margin: 0;
@@ -16,9 +153,12 @@ body {
 }
 
 .message {
+    background-color: #33384B;
+    margin-top: 10px;
     color: rgb(252, 104, 104);
-    border-top: solid gray 2px; /*lines*/
-    padding: 20px 0px;
+    border-radius: 10px;
+    border-top: solid transparent/*#18181f*/ 10px; /*lines*/
+    padding: 0px 10px 10px 10px;
 }
 .message message {
     word-wrap: break-word;
@@ -26,10 +166,13 @@ body {
     font-weight: bold;
 }
 .message name::after {
-    content: ": ";
+    /*content: ": ";*/
+    content: "";
 }
 
 .message date {
+    color: gainsboro;
+    font-size: 12px;
     float: right;
 }
 
@@ -52,7 +195,7 @@ input[type=button] {
     border-radius: 5px;
     width: 80px;
     height: 32px;
-    background-color: rgb(252, 104, 104);
+    background-color: #272b3b;
     color: white;
     font-weight: bolder;
     font-size: 14px;
@@ -63,8 +206,8 @@ input[type=submit] {
     border-color: transparent;
     border-radius: 5px;
     width: 80px;
-    height: 32px;
-    background-color: rgb(252, 104, 104);
+    height: 33px;
+    background-color: #272b3b;
     color: white;
     font-weight: bolder;
     font-size: 14px;
@@ -72,10 +215,17 @@ input[type=submit] {
 }
 
 .msag {
-    background-color: #242424;
-    height: 28px;
-    border-color: transparent;
+    background-color: #272b3b; /*33384B*/
+    height: 32px;
+    padding: 15px;
     border-radius: 5px;
     color: white;
     font-weight: bold;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }

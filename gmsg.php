@@ -6,7 +6,7 @@
 
     $pw = $_GET['pawd'];
 
-
+    echo $welcome;
     while(!feof($chat)) {
       $mss = fgets($chat);
 
@@ -14,10 +14,13 @@
       $mss = $mss_pause;
 
       $message = "<div class=\"message\">" . $mss ."</div>";
-      echo $message;
+      
+      if ($mss != "") {
+        echo $message;
+      }
     }
-            
-    echo fread($chat,filesize("chat.txt"));
-            
+    
+    // echo fread($chat,filesize("chat.txt"));
+
     fclose($chat);
 ?>

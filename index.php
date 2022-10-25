@@ -3,7 +3,7 @@ header("X-Frame-Options: DENY");
 header("Content-Security-Policy: frame-ancestors 'none'", false);
 session_start();
 ?>
-
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,11 +88,11 @@ session_start();
                                     $("#messages").load("gmsg.php?pawd="+opkey);
                             }), 1000);
 
-                            
                             document.getElementById('inkuy').value = inkey;
                             document.getElementById('ffm').hidden = true;
                             document.getElementById('fff').hidden = true;
                             document.getElementById('pbost').hidden = false;
+                            
                         }
                         else {
                             document.getElementById('loginmsg').style.color = "red";
@@ -113,28 +113,40 @@ session_start();
 </head>
 <body>
     <form class="vertical-center" onsubmit="askagin();" id="ffm" style="display:flex; justify-content: center;">
-        <div id="fff" style="width: 260px; height: 130px; background-color: white; float: left; padding: 30px; border-radius: 5px;">
-            <input type="password" style="height: 40px; width: 240px; font-size: 20px;" id="keebox">
+        <div id="fff" style="width: 360px; height: 200px; background-color: #1e1f27; float: left; padding: 30px; border-radius: 5px;">
+            <div class="webflow-style-input">
+                <input class="" type="password" id="keebox" placeholder="Password" style="text-align: center; font-weight: bolder;"></input>
+                <button disabled><i class="icon ion-android-lock"></i></button>
+            </div>
+            <!--<input type="password" placeholder="Password" style="height: 40px; width: 240px; font-size: 20px;" id="keebox">-->
             <br/>
-            <p id="loginmsg" style="font-size: 16px; font-weight: bolder">Enter The Key</p>
-            <input type="submit" value="Join!" style="width: 250px; height: 45px; text-align: center;">
+            <p id="loginmsg" style="font-size: 16px; font-weight: bolder; text-align: center; color: #858ba1;">Enter the Key&nbsp;</p>
+            <input type="submit" value="Join!" style="width: 300px; height: 45px; text-align: center; background-color: #272b3b; color: #7881a1;">
         </div>
     </form>
 
-    <div id="messages">
+    <div id="messages" style="font-size: 16px;">
     </div>
-    <form action="post.php" id="pbost" method="POST" hidden>
-        <input hidden type="text" id="uname" name="name" />
-        <input hidden type="text" name="inkay" id="inkuy">
-        <p></p>
-
-        <div style="text-align: center;">
-            <input type="text" id="message" class="msag" name="message" style="border-radius: 5px 0px 0px 5px;" autofocus /> 
-            <input type="submit" value="Send" style="border-radius: 0px 5px 5px 0px;" />
+    <div style="height: 110px"></div>
+    <center>
+        <div id="container">
+            <div id="footer">
+            <form action="post.php" id="pbost" method="POST" onsubmit="window.scrollTo(0,document.body.scrollHeight);" hidden>
+    <input hidden type="text" id="uname" name="name" />
+    <input hidden type="text" name="inkay" id="inkuy">
+    <p></p>
+    <div style="text-align: center;">
+        <input type="text" id="message" class="msag" name="message" style="border-radius: 5px 0px 0px 5px;" placeholder="Write a message..." autofocus /> 
+        <input type="submit" value="Send" style="border-radius: 0px 5px 5px 0px;" />
+    </div>
+    <input type="checkbox" name="type" value="nojs" style="display:none" checked/>
+    <br/><br/>
+</form>
+            </div>
         </div>
-
-        <input type="checkbox" name="type" value="nojs" style="display:none" checked/>
-        <br/><br/>
-    </form>
+    </center>
 </body>
+<footer>
+
+</footer>
 </html>
